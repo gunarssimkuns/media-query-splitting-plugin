@@ -1,4 +1,4 @@
-const splitByMediaQuery = require('./splitByMediaQueryOld')
+const splitByMediaQuery = require('./splitByMediaQueryNew')
 
 
 const handleApplyOld = ({ compiler, options }) => {
