@@ -33,9 +33,16 @@ This is default options, it can be omitted.
 ```js
 {
   media: {
-    mobileEnd: 568,
-    tabletPortraitEnd: 768,
-    tabletLandscapeEnd: 1024,
+    mobile: '(max-width: 568px)',
+    tabletPortrait: {
+      query: '(min-width: 569px) and (max-width: 768px)',
+      prefetch: 'tabletLandscape',
+    },
+    tabletLandscape: {
+      query: '(min-width: 769px) and (max-width: 1024px)',
+      prefetch: 'tabletPortrait',
+    },
+    desktop: '(min-width: 1025px)',
   },
   splitTablet: true,
   minify: true,
